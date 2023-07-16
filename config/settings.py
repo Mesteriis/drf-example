@@ -1,8 +1,6 @@
 from pathlib import Path
 
-
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 SECRET_KEY = "django-insecure-7my=xx)2*=l0(1*1$9s+qzcih6fv$mqomh4r@sw6yxf)=igj1-"
 
@@ -10,7 +8,6 @@ SECRET_KEY = "django-insecure-7my=xx)2*=l0(1*1$9s+qzcih6fv$mqomh4r@sw6yxf)=igj1-
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -26,6 +23,7 @@ INSTALLED_APPS = [
     "lessons.apps.LessonsConfig",
     "users.apps.UsersConfig",
     "api.apps.ApiConfig",
+    "django_filters",
 ]
 
 MIDDLEWARE = [
@@ -58,7 +56,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "config.wsgi.application"
 
-
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
@@ -68,7 +65,6 @@ DATABASES = {
         "NAME": BASE_DIR / "db.sqlite3",
     },
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -88,7 +84,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
@@ -99,7 +94,6 @@ TIME_ZONE = "UTC"
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
@@ -115,5 +109,6 @@ REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
         "rest_framework.permissions.AllowAny",
     ],
+    "DEFAULT_FILTER_BACKENDS": ("django_filters.rest_framework.DjangoFilterBackend",),
 }
 AUTH_USER_MODEL = "users.CustomUser"

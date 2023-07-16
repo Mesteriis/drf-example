@@ -10,3 +10,5 @@ class Lessons(models.Model):
     desc = models.TextField()
     img = models.ImageField(upload_to=upload_path)
     link_video = models.URLField()
+
+    courses = models.ManyToManyField("courses.Courses")
