@@ -19,6 +19,7 @@ class CoursesDeleteAPIView(CoursesBaseAPIView, generics.DestroyAPIView):
 class CoursesListAPIView(CoursesBaseAPIView, generics.ListAPIView):
     pass
 
+
 class CoursesUpdateAPIView(CoursesBaseAPIView, generics.UpdateAPIView):
     pass
 

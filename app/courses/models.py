@@ -1,8 +1,9 @@
 from django.db import models
 
-# Create your models here.
-def upload_path(file, model)->str:
-    return f'courses/{model.pk}/{file}'
+
+def upload_path(file, model) -> str:
+    return f"courses/{model.pk}/{file}"
+
 
 class Courses(models.Model):
     name = models.CharField(max_length=255)

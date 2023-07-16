@@ -1,5 +1,5 @@
 __all__ = [
-    "LessonsViewSet"
+    "LessonsViewSet",
 ]
 
 from .views import LessonsViewSet

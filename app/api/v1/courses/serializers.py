@@ -9,5 +9,5 @@ class CoursesBaseSerializer(serializers.ModelSerializer):
         fields = [
             "name",
             "img",
-            "desc"
+            "desc",
         ]

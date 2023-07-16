@@ -11,6 +11,5 @@ router.register("lessons", LessonsViewSet)
 
 urlpatterns = [
     path("v1/", include(router.urls)),
-    path("v1/", include('api.v1.courses.urls'))
+    path("v1/", include("api.v1.courses.urls")),
 ]
-

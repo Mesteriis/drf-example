@@ -6,8 +6,9 @@ from users.manager import UserManager
 
 # Create your models here.
 
-def upload_path(file, model)->str:
-    return f'avatars/{model.pk}/{file}'
+
+def upload_path(file, model) -> str:
+    return f"avatars/{model.pk}/{file}"
 
 
 class CustomUser(AbstractUser):
